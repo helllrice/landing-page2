@@ -314,6 +314,12 @@ body {
     left: 60%;
 }
 
+@media (max-width: 768px) { 
+    .photo-address {
+        margin-top: 40px;
+    }
+ }
+
 @media (max-width: 576px) { 
     .address__list {
         padding-bottom: 70px;
