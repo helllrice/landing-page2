@@ -21,7 +21,9 @@ body {
 }
 
 .navbar {
-    background: url('../images/background.png');
+    background-image: url('../images/background.png');
+    background-repeat: no-repeat !important;
+    background-position: center center;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -202,18 +204,45 @@ body {
  }
 
 @media (max-width: 576px) { 
+    .navbar {
+        background-repeat: no-repeat;
+        background-repeat: no-repeat !important;
+        background-position: center center;
+        background-size: cover;
+    }
+    
     .navbar-logo {
         display: none;
     }
 
+    .content__box p {
+        font-size: 16px;
+    }
+
+    .content__box h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+
     .content__item {
         flex-direction: column;
+    }
+
+    .content__item .content-btn {
+        padding: 10px 20px;
+        font-size: 12px;
     }
 
     .content__item ul {
         display: flex;
         padding: 40px 0;
         justify-content: center;
+    }
+
+    .content__item img {
+        width: 25px;
+        height: 25px;
     }
 }
 
@@ -288,6 +317,36 @@ body {
 @media (max-width: 576px) { 
     .address__list {
         padding-bottom: 70px;
+        margin-left: 40px;
+    }
+
+    .address__list li h2 {
+        font-size: 20px;
+    }
+
+    .address__list li p  {
+        font-size: 10px;
+    }
+
+    .address__list li p span {
+        display: none; 
+    }
+
+    .photo-address img {
+        width: 135px !important;
+        height: 185px !important;
+        object-fit: contain;
+    }
+
+    .photo-address img:nth-child(1){
+        top: 120px;
+        left: 10px;
+    }
+    
+    .photo-address img:nth-child(2){
+     
+        top: 40px;
+        left: 52%;
     }
 }
 
@@ -363,10 +422,19 @@ body {
   }
 
   @media (max-width: 576px) { 
+    .swiper-slide img {
+        width: 30px;
+        height: 20px;
+    }
+
+    .swiper-slide h2 {
+        font-size: 20px;
+    }
+
     .swiper-slide p {
         text-align: none;
         width: 100% !important;
-        font-size: 12px !important;
+        font-size: 10px !important;
         color: #ffffff;
       }
 
@@ -432,4 +500,36 @@ form button {
     border: none;
     cursor: pointer;
     font-size: 20px;
+}
+
+@media (max-width: 576px) {
+    .modal .modal_content {
+        background-color: #fefefe;
+        margin-right: 64px;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 300px;
+        z-index: 99999;
+    }
+
+    form h2 {
+        font-family: 'Poppins', sans-serif; 
+        padding-top: 10px;
+        font-size: 18px;
+    }
+
+    form textarea {
+        outline: none;
+        border: 1px solid #E7E7E7;
+    }
+
+    form button {
+        margin-top: 10px;
+        background-color: #3A4574;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: none;
+        cursor: pointer;
+        font-size: 16px;
+    }
 }
